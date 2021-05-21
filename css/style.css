@@ -492,6 +492,157 @@ nav ul li .signup{
     box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
 }
 /* Services Ends  */
+
+/* Team  */
+.team-section{
+	background-color:#1227e2;
+	padding:50px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .row.ge{
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .team-section .section-title h1{
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #ffffff;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+ }
+ .team-section .section-title h1::before{
+    content: '';
+    background-color: #ffcd05;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 30%;
+}
+ .team-section .team-box{
+	 flex-basis: 33.33%;
+	 max-width: 33.33%;
+	 padding:15px; 
+ }
+ .team-section .team-box .inner-box .image-box{
+	 background-color:#516aef;
+	 padding:20px;
+	 position: relative;
+	 overflow: hidden;
+ }
+ 
+ .team-section .team-box .inner-box .image-box::before{
+  content: '';
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: all .8s ease;
+ }
+ .team-section .team-box .inner-box:hover .image-box::before{
+	 -webkit-transform: translateY(0%);
+	 transform: translateY(0%);
+ }
+ .team-section .team-box .inner-box .image-box .img{
+	 position: relative;
+	 z-index: 2;
+     overflow: hidden;
+     background-color: blue;
+ }
+ 
+ .team-section .team-box .inner-box .image-box .img::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height: 100%;
+  background-color:rgba(130, 144, 223, 0.3);
+  transform: translateY(100%);
+  transition: all .8s ease;
+  z-index: 2;
+ }
+ .team-section .team-box .inner-box:hover .image-box .img::before{
+   -webkit-transform: translateY(0%);
+	 transform: translateY(0%);
+ }
+ 
+ .team-section .team-box .inner-box .image-box .img .social-icons{
+	 position: absolute;
+	 left:0;
+	 width: 100%;
+	 bottom:0;
+	 display: flex;
+	 justify-content: center;
+ }
+ 
+ .team-section .team-box .inner-box .image-box .img .social-icons a{
+	 display: inline-block;
+	 height: 45px;
+	 width: 45px;
+	 background-color: #f3b90c;
+	 text-align: center;
+	 line-height: 45px;
+	 font-size: 22px;
+	 color:#ffffff;
+	 transition: all .5s ease;
+	 -webkit-transform: translateY(100%);
+	 transform: translateY(100%);
+	 z-index: 10;
+ }
+ .team-section .team-box .inner-box .image-box .img .social-icons a:nth-child(2){
+	 transition-delay: 0.2s;
+ }
+ .team-section .team-box .inner-box .image-box .img .social-icons a:nth-child(3){
+	 transition-delay: 0.4s;
+ }
+ .team-section .team-box .inner-box .image-box .img .social-icons a:nth-child(4){
+	 transition-delay: 0.6s;
+ }
+ .team-section .team-box .inner-box:hover .image-box .img .social-icons a{
+   -webkit-transform: translateY(-20px);
+	 transform: translateY(-20px);	
+ }
+ .team-section .team-box .inner-box .image-box .img img{
+  width: 100%;
+  display: block;
+  animation: img 1.8s ease alternate infinite;
+ }
+ @keyframes img{
+	 0%{transform: scale(1);}
+	 100%{transform: scale(1.1);}
+ }
+ 
+ .team-section .team-box .inner-box .caption-text{
+	 padding:20px 20px ;
+ }
+ .team-section .team-box .inner-box .caption-text h4{
+	 margin:0;
+	 font-size: 24px;
+	 color:#ffffff;
+ }
+ 
+ .team-section .team-box .inner-box .caption-text p{
+	 font-size: 16px;
+	 color:#d5d5d5;
+	 margin:10px 0px;
+ }
 @media screen and (min-width: 931px) {
     .banner-text h1{
         font-size: 5rem;
@@ -575,6 +726,12 @@ nav ul li .signup{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     padding: 30px;
+    }
+}
+@media(max-width: 767px){
+    .team-section .team-box{
+        max-width: 100%;
+        flex-basis: 100%;
     }
 }
 @media screen and (max-width: 637px) {
