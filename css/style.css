@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 .row{
     max-width: 1000px;
@@ -212,10 +213,43 @@ nav{
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    padding: 25px;
+    padding: 10px;
     align-items: center;
     margin: 0 auto;
     flex-direction: row;
+    transition: all .3s ease-in-out;
+}
+@keyframes scrolldown{
+    from{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+nav.drop{
+    background-color: #fff;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    position: fixed;
+    z-index: 90;
+    animation: scrolldown .3s ease-in-out;
+    width: 100%;
+}
+nav.drop ul li a{
+    color: #1227e2;
+    position: relative;
+}
+nav.drop ul li a:hover{
+    color: #ffcd05;
+}
+nav.drop ul li .signin:hover{
+    color: #1227e2;
+}
+nav.drop ul li .signin{
+    color: #fff;
+}
+nav.drop ul li .signup{
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
 }
 nav .logo{
     font-size: 1.8rem;
@@ -254,6 +288,13 @@ nav .logo{
     border-radius: 10px;
     background-color: #fff;
 }
+nav.drop .hamburger span{
+    background-color: #1227e2;
+}
+nav.drop .hamburger span::before,
+nav.drop .hamburger span::after {
+    background-color: #1227e2;
+}
 .hamburger span::before{
     transform: translateY(-14px);
 }
@@ -261,6 +302,10 @@ nav .logo{
     transform: translateY(14px);
 }
 .hamburger.rot span{
+    transform: translateX(-50px);
+    background: transparent;
+}
+nav.drop .hamburger.rot span{
     transform: translateX(-50px);
     background: transparent;
 }
@@ -470,16 +515,23 @@ nav ul li .signup{
         left: 0;
         background-color: #ffffff;
         padding: 20px;
-        z-index: 3;
+        z-index: 20;
+        box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    }
+    nav.drop ul{
+        background-color: #1227e2;
     }
     nav ul .signin-tab {
         margin-top: 5px;
-    }
+    }   
     nav ul .signup-tab {
         margin-top: 10px;
     }
     nav ul li a{
         color: #1227e2;
+    }
+    nav.drop ul li a{
+        color: #fff;
     }
     nav ul li .signin{
         background-color: #1227e2;
@@ -503,6 +555,10 @@ nav ul li .signup{
         top: -10px;
         right: 30px;
         transform: rotate(-45deg);
+        z-index: 2;
+    }
+    nav.drop ul::before{
+        background-color: #1227e2;
     }
     .banner .draw{
         display: none;

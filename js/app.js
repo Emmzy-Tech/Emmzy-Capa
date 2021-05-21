@@ -56,3 +56,24 @@ seCloseBtn.addEventListener('click', function(){
     secondForm.classList.remove('show');
     secondForm.classList.add('hide');
 })
+
+const navbar = document.querySelector('.navbar');
+const logoImage = document.querySelector('.logo-img');
+
+
+
+window.onscroll = function(){scrollFunction()};
+
+function scrollFunction(){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+        navbar.classList.add('drop');
+    }else{
+        navbar.classList.remove('drop');
+    }
+
+    if(navbar.classList.contains ("drop")){
+        logoImage.setAttribute('src', './images/logo-blacks.png');
+    }else{
+        logoImage.setAttribute('src', './images/logo-whites.png');
+    }
+}
