@@ -233,7 +233,6 @@ nav.drop{
     position: fixed;
     z-index: 90;
     animation: scrolldown .3s ease-in-out;
-    width: 100%;
 }
 nav.drop ul li a{
     color: #1227e2;
@@ -518,6 +517,9 @@ nav ul li .signup{
         z-index: 20;
         box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
     }
+    nav.drop{
+        width: 100%;
+    }
     nav.drop ul{
         background-color: #1227e2;
     }
@@ -529,6 +531,9 @@ nav ul li .signup{
     }
     nav ul li a{
         color: #1227e2;
+    }
+    nav ul li a:hover{
+        color: #ffcd05;
     }
     nav.drop ul li a{
         color: #fff;
@@ -560,9 +565,6 @@ nav ul li .signup{
     nav.drop ul::before{
         background-color: #1227e2;
     }
-    .banner .draw{
-        display: none;
-    }
     .eclip{
         display: none;
     }
@@ -580,5 +582,8 @@ nav ul li .signup{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         padding: 20px;
+        }
+        .banner .draw{
+            display: none;
         }
 }
