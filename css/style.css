@@ -36,6 +36,91 @@ background-size: cover;
     bottom: 0;
     right: 20px;
 }
+.form-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 10px;
+}
+.form-overlay.show{
+    display: flex;
+}
+.form-overlay.hide{
+    display: none;
+}
+.form-overlay .form-con{
+    background: #fff;
+    max-width: 600px;
+    max-height: auto;
+    padding: 20px 0;
+    border-radius: 8px;
+    position: relative; 
+    transition: all .3s ease-in-out;
+}
+.form-overlay .form-con .logo{
+    background-color: #1227e2;
+    padding: 15px 20px;
+}
+.form-con .reg-con{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+.form-con form{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.form-con form .form-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-con form .form-close.fa:hover{
+    color: #1227e2;
+}
+.form-con form .confrim{
+    margin-bottom: 20px;
+}
+.form-con form > a{
+    background-color: #1227e2;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.form-con form .sign-log{
+    width: 100%;
+    text-align: center;
+}
+.form-con form > input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid #888888;
+}
+.form-con form > input:focus{
+    border: 2px solid #1227e2;
+}
+.form-con form > input:focus::placeholder{
+    color: #1227e2;
+}
 nav{
     max-width: 1200px;
     display: flex;
@@ -45,7 +130,7 @@ nav{
     margin: 0 auto;
     flex-direction: row;
 }
-.logo{
+nav .logo{
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffffff;
@@ -351,6 +436,6 @@ nav ul li .signup{
     .service-content{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        padding: 10px;
+        padding: 20px;
         }
 }
