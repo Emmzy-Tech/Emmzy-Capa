@@ -368,6 +368,12 @@ nav ul li a{
     text-decoration: none;
     font-weight: 500;
 }
+nav.drop ul li a.active{
+    color: #ffcd05;
+}
+nav ul li a.active{
+    color: #ffcd05;
+}
 nav ul li .signin{
     background-color: #ffcd05;
     padding: 10px 20px;
@@ -793,6 +799,157 @@ nav ul li .signup{
     color: #000;
 }
 
+
+ /* Contact Us */
+ .contact-us{
+    background-color: #f5f8fd;
+    padding: 100px 15px;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-us .section-title h1::before{
+    left: 30%;
+}
+.contact-us .contact-form{
+    background-color: #fff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 40px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+}
+.contact-us .contact-form .text{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+.contact-us .contact-form .text h2{
+    font-size: 26px;
+    color: #000;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+.contact-us .contact-form .text p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #838383;
+    line-height: 24px;
+    margin: 0;
+}
+.contact-us .contact-form .space-between{
+    justify-content: space-between;
+}
+.contact-us .contact-form .col-6{
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+}
+.contact-us .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact-us .contact-form .form-control{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.contact-us .contact-form  .area {
+    height: 150px;
+    
+}
+.contact-us .contact-form .form-control::placeholder{
+    color: #838383;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-us .contact-form .button{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact-us .contact-form .button a{
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    background-color: #f3b90c;
+    box-shadow: 0 10px 15px #d5d5d5;
+    border: none;
+}
+.contact-us .contact-form .button a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Footer */
+footer{
+    padding: 70px 15px 30px;
+    background-color: #0c0c17;
+}
+footer .logo{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+footer .social{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+footer .social a{
+        color: #eeeeee;
+        text-decoration: none;
+        margin: 0px 12px;
+        transition: all .5s ease;
+        text-decoration: none;
+}
+footer .social a:hover{
+    color: #fff;
+}
+footer .to-top{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: right;
+    padding-right: 30px;
+}
+footer .to-top .fa{
+    color: #ddd3d3;
+    font-size: 40px;
+}
+footer .to-top .fa:hover{
+    color: #fff;
+}
+
+/* copyright */
+.copyright{
+    background-color: #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding: 15px;
+}
+.copyright p{
+    color: #838383;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
 @media screen and (min-width: 931px) {
     .banner-text h1{
         font-size: 5rem;
@@ -824,13 +981,7 @@ nav ul li .signup{
     }
     nav.drop ul{
         background-color: #1227e2;
-    }
-    nav ul .signin-tab {
-        margin-top: 5px;
-    }   
-    nav ul .signup-tab {
-        margin-top: 10px;
-    }
+    }  
     nav ul li a{
         color: #1227e2;
     }
@@ -841,17 +992,16 @@ nav ul li .signup{
         color: #fff;
     }
     nav ul li .signin{
-        background-color: #1227e2;
-        padding: 5px;
-        border-radius: 20px;
-        color: #ffcd05;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        color: #1227e2;
     }
     nav ul li .signup{
-        background-color: #ffcd05;
-        padding: 5px;
-        border-radius: 20px;
+        background-color: transparent;
+        padding: 0;
+        border-radius: none;
         color: #1227e2;
-        box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
     }
     nav ul::before{
         content: '';
@@ -891,6 +1041,13 @@ nav ul li .signup{
         padding-top: 10px;
     }
     .about-me .about-content .img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-us .contact-form{
+        padding: 20px;
+    }
+    .contact-us .contact-form .col-6{
         flex: 0 0 100%;
         max-width: 100%;
     }

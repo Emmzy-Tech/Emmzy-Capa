@@ -77,3 +77,27 @@ function scrollFunction(){
         logoImage.setAttribute('src', './images/logo-whites.png');
     }
 }
+
+
+// Link tags onclick
+const a = nav.querySelectorAll('a');
+a.forEach(function(element){
+    element.addEventListener('click', function(){
+        for(q=0; q<a.length; q++){
+            a[q].classList.remove('active');
+            nav.classList.toggle('open');
+            hamBtn.classList.toggle('rot');
+        }
+        this.classList.add('active');
+    })
+})
+
+//password validation for Register
+const passwdLength = document.querySelector('.password-lenth');
+const passwd = document.querySelector('.password');
+
+errorPasswd = "";
+
+if(passwd.value == '6'){
+    console.log("check me here");
+}

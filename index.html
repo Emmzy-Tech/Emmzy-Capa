@@ -26,7 +26,8 @@
                         <input type="text" placeholder="First Name">
                         <input type="text" placeholder="Surname">
                         <input type="email" placeholder="Email Address">
-                        <input type="password" placeholder="Choose a password">
+                        <input class="password" type="password" placeholder="Choose a password">
+                        <div class="password-lenth"></div>
                         <input type="password" placeholder="Confirm password">
                         <div class="confrim">
                             <input type="checkbox"> <span>I agree with the <a href="#">Terms</a> and <a href="#">Conditions</a></span>
@@ -71,7 +72,7 @@
                 </div>
                 <ul class="ul-nav">
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home" class="active">Home</a>
                     </li>
                     <li>
                         <a href="#service">Services</a>
@@ -337,6 +338,68 @@
         </div>
     </section>
 	<!--End About-->
+
+     <!-- Start Contact Us -->
+   <section id="contact" class="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="section-title text-center">
+                <h1>Get In Touch</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-form">
+                <div class="row">
+                    <div class="text">
+                        <h2>Drop us a line</h2>
+                        <p>We are here to answer any Question you may have</p>
+                    </div>
+                </div>
+                <form action="">
+                <div class="row space-between" >
+                    <div id="contact-form" method="post" class="col-6">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-6">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <textarea class="form-control area" placeholder="Your Comment"></textarea>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="button text-right">
+                        <a href="#">Get In Touch</a>
+                     </div>
+                </div>
+             </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Us -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="logo">
+				<img src="logo.png" alt="">
+			</div>
+			<div class="social">
+				<a href="" ><i class="fa fa-facebook"></i></a>
+				<a href="" ><i class="fa fa-twitter"></i></a>
+				<a href="" ><i class="fa fa-instagram"></i></a>
+				<a href="" ><i class="fa fa-linkedin"></i></a>
+			</div>
+			<div class="to-top">
+				<a href="#home"><i class="fa fa-arrow-circle-up"></i></a>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- End Footer -->
 
     <!-- Javascript Goes Here...  -->
     <script src="./js/app.js"></script>
