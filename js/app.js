@@ -16,12 +16,21 @@ hamBtn.addEventListener('click', ()=>{
 const form = document.querySelector('.form-overlay');
 const showBtns = document.querySelectorAll(".sign-btn");
 const closeBtn = document.querySelector('.form-close');
+const secondForm = document.querySelector('.form-over');
+const showBtn = document.querySelectorAll('.signin');
+const seCloseBtn = document.querySelector('.close2');
 
 //click outside and close
 form.addEventListener('click', function(){
     if(event.target==form){
         form.classList.remove('show');
         form.classList.add('hide');
+    }
+})
+secondForm.addEventListener('click', function(){
+    if(event.target==secondForm){
+        secondForm.classList.remove('show');
+        secondForm.classList.add('hide');
     }
 })
 
@@ -40,9 +49,7 @@ closeBtn.addEventListener('click', function(){
 })
 
 //Login
-const secondForm = document.querySelector('.form-over');
-const showBtn = document.querySelectorAll('.signin');
-const seCloseBtn = document.querySelector('.close2');
+
 
 for(k = 0; k<showBtn.length; k++){
     showBtn[k].addEventListener('click', function(){
@@ -97,7 +104,10 @@ const passwdLength = document.querySelector('.password-lenth');
 const passwd = document.querySelector('.password');
 
 errorPasswd = "";
+passwdValue = "6";
 
-if(passwd.value == '6'){
+if(passwd.value.length > "6"){
     console.log("check me here");
+}else{
+    console.log("am here");
 }
