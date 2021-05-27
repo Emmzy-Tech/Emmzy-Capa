@@ -78,11 +78,11 @@ function scrollFunction(){
         navbar.classList.remove('drop');
     }
 
-    if(navbar.classList.contains ("drop")){
-        logoImage.setAttribute('src', './images/logo-blacks.png');
-    }else{
-        logoImage.setAttribute('src', './images/logo-whites.png');
-    }
+    // if(navbar.classList.contains ("drop")){
+    //     logoImage.setAttribute('src', './images/logo-blacks.png');
+    // }else{
+    //     logoImage.setAttribute('src', './images/logo-whites.png');
+    // }
 }
 
 

@@ -47,32 +47,30 @@ section-title{
 /* Landing Page Start */
 .wrapper{
     width: 100%;
-    background-color: #0099ff;
-    background-image: url("../images/bb.png");
+    background-color: #334BC5;
+    background-image: url("../images/backgroundImage.jpg");
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    background-blend-mode: lighten;
+    
 }
-/* .eclip{
-    background-image: url(./images/elipse-home-slide.png);
-    position: absolute;
-    background-size: cover;
-    width: 700px;
-    height: 700px;
-    top: -100px;
-    left: -100px;
+.rows{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-content: center;
+    justify-content: space-between;
 }
-.eclip2{
-    background-image: url(../images/bg2.png);
-    position: absolute;
-    background-size: cover;
-    width: 1300px;
-    height: 1300px;
-    top: -15%;
-    right: -15%;
+/* .side-img{
+    max-width: 400px;
+    background-color: #1227e2;
 } */
+.side-img img{
+    max-width: 418px;
+}
+
 .form-overlay{
     position: fixed;
     top: 0;
@@ -99,6 +97,17 @@ section-title{
     border-radius: 8px;
     position: relative; 
     transition: all .3s ease-in-out;
+    animation: skew .3s ease-in-out;
+}
+.form-over .form-con{
+    animation: skew .3s ease-in-out;
+}
+@keyframes skew{
+    from{
+        transform: scale(0.5);
+    }to{
+        transform: scale(1);
+    }
 }
 .form-overlay .form-con .logo{
     background-color: #1227e2;
@@ -309,7 +318,7 @@ nav .logo{
     width: 40px;
     display: block;
     height: 5px;
-    background-color: #fff;
+    background-color:#1227e2;
     border-radius: 10px;
     position: absolute;
     opacity: 1;
@@ -321,7 +330,7 @@ nav .logo{
     height: 5px;
     width: 40px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #1227e2;
 }
 nav.drop .hamburger span{
     background-color: #1227e2;
@@ -364,10 +373,12 @@ nav ul.open{
 nav ul li{
     list-style: none;
     padding-top: 5px;
+    display: flex;
+    align-items: center;
 }
 nav ul li a{
-    color: #fff;
-    text-decoration: none;
+    color: #000000;
+    text-decoration: none;  
     font-weight: 500;
 }
 nav.drop ul li a.active{
@@ -378,14 +389,23 @@ nav ul li a.active{
 }
 nav ul li .signin{
     background-color: #ffcd05;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
 }
 nav ul li .signup{
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
-    color: #1227e2;
+    color: #334BC5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
 }
 .banner{
     display: flex;
@@ -408,7 +428,7 @@ nav ul li .signup{
     width: 90%;
 }
 .banner-text{
-    color: #ffffff;
+    color: #000000;
     padding: 15px;
 }
 .banner-text h4{
@@ -423,7 +443,7 @@ nav ul li .signup{
     margin-bottom: 50px;
 }
 .banner-text a{
-    background-color:  #ffcd05;
+    background-color:  #334BC5;
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
@@ -747,7 +767,7 @@ nav ul li .signup{
     color: #febd01;
 }
 .about-me .about-content .text p{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color: #838383;
@@ -758,7 +778,7 @@ nav ul li .signup{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.about-me .about-content .text .info .list{
+.about-me .about-content .text .info .list{ 
     flex: 0 0 calc(50% - 15px);
     max-width: calc(50% - 15px);
     margin-top: 10px;
@@ -821,10 +841,11 @@ nav ul li .signup{
 .contact-us .contact-form{
     background-color: #fff;
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 600px;
     padding: 40px;
     border: 1px solid #eeeeee;
     border-radius: 4px;
+    margin: 20px auto;
 }
 .contact-us .contact-form .text{
     flex: 0 0 100%;
@@ -963,6 +984,15 @@ footer .to-top .fa:hover{
         display: none;
     }
 }
+@media screen and (max-width: 1141px){
+    .side-img{
+        display: none;
+    }
+    .rows{
+        display: block;
+        width: 100%;
+    }
+}
 @media screen and (max-width: 931px) {
     nav ul{
         display: none;
@@ -1018,12 +1048,6 @@ footer .to-top .fa:hover{
     }
     nav.drop ul::before{
         background-color: #1227e2;
-    }
-    .eclip{
-        display: none;
-    }
-    .eclip2{
-        display: none;
     }
     .service-content{
     grid-template-columns: 1fr 1fr;
