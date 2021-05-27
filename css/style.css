@@ -566,6 +566,10 @@ nav ul li .signup{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../images/backgroundImage.jpg");
+    background-blend-mode: hue;
+    background-attachment: fixed;
+    background-position: center;
  }
  .container{
      display: flex;
