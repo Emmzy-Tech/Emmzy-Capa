@@ -293,7 +293,7 @@ nav.drop ul li .signin{
     color: #fff;
 }
 nav.drop ul li .signup{
-    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    /* box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%); */
 }
 nav .logo{
     font-size: 1.8rem;
@@ -396,6 +396,7 @@ nav ul li .signin{
     outline: none;
     cursor: pointer;
     font-weight: 500;
+    font-size: 16px;
 }
 nav ul li .signup{
     background-color: #fff;
@@ -406,6 +407,7 @@ nav ul li .signup{
     outline: none;
     cursor: pointer;
     font-weight: 500;
+    font-size: 16px;
 }
 .banner{
     display: flex;
@@ -1011,9 +1013,9 @@ footer .to-top .fa:hover{
     nav.drop{
         width: 100%;
     }
-    nav.drop ul{
-        background-color: #1227e2;
-    }  
+    nav.drop ul li .signin{
+        color: #1227e2;
+    } 
     nav ul li a{
         color: #1227e2;
     }
@@ -1021,7 +1023,7 @@ footer .to-top .fa:hover{
         color: #ffcd05;
     }
     nav.drop ul li a{
-        color: #fff;
+        color: #1227e2;
     }
     nav ul li .signin{
         background-color: transparent;
@@ -1046,9 +1048,7 @@ footer .to-top .fa:hover{
         transform: rotate(-45deg);
         z-index: 2;
     }
-    nav.drop ul::before{
-        background-color: #1227e2;
-    }
+
     .service-content{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
